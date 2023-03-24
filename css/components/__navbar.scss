@@ -1,0 +1,11 @@
+@import "../Modules/_globals";
+
+@media only screen and (min-width: 992px){
+    .input-group, .btn-outline-primary {
+        display: none;
+    }
+}
+
+nav {
+    background-color: green;
+}

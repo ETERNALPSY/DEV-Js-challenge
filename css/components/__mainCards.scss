@@ -1,0 +1,43 @@
+@import "../Modules/_globals";
+.active{
+    border: none !important;
+    background: none;
+    font-weight: bold !important;
+}
+.card-title{
+    font-size: 2.5em ;
+    font-weight: bold;
+    a{
+        color: $text-color;
+        text-decoration: none;
+    }
+    a:hover{
+        color: $accent-brand-lighter;
+    }
+}
+.tabbar-main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+   
+}
+.list-tag__main{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2em;
+
+    li{
+        margin: 0 0.5em;
+        color: $syntax-comment-color;
+        cursor: pointer;
+    }
+
+    li:hover{
+        border: 1px solid $syntax-comment-color;
+        border-radius: 0.5em;
+        padding: 0.2em;
+        cursor: pointer;
+    }
+}

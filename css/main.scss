@@ -1,0 +1,22 @@
+@use "./components/_asideLeft";
+@use "./components/_asideRight";
+@use "./components/_navbar";
+@use "./components/_footer";
+@use "./components/_mainCards";
+@use "./components/_postCard";
+@use "./components/_postAsideRight";
+@use "./components/_postAsideLeft";
+
+
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    background-color: #F5F5F5;
+}
+
+

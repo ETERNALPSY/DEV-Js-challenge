@@ -1,0 +1,36 @@
+@import "../Modules/_globals";
+
+
+.list-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+    li {
+       a{
+        display: block;
+        color: $text-color;
+        padding: 5px 0;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 300;
+        transition: all 0.3s ease-in-out;
+
+       }
+         
+    }
+    li:hover{
+      background-color: #dce0ff;
+      a:hover{
+        color: $accent-brand-lighter;
+     
+        font-weight: 500;
+        text-decoration: underline;
+       }
+    }
+
+}
+
+.list-tags{
+    overflow: scroll;
+    height: 20em;
+}
