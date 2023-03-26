@@ -1,11 +1,11 @@
-const createCardPostHome = (isLoggedIn) => {
+const createCardPostHome = (imgUrl, postTitle, hashtags, date, id, isLogged) => {
   //Provicional, serán pasados como paramentros
-  let imgUrl = 'https://picsum.photos/200/100';
+  // let imgUrl = 'https://picsum.photos/200/100';
   let userName = 'Johana Smith';
-  let hashtags = ["#news", "#javascript", "#webdev", "#gatsby"];
-  let postTitle = 'Welcome to ECS9, is better than ECS6'
-  let date = '12/12/2023';
-  let id = 123;
+  // let hashtags = ["#news", "#javascript", "#webdev", "#gatsby"];
+  // let postTitle = 'Welcome to ECS9, is better than ECS6'
+  // let date = '12/12/2023';
+  // let id = 123;
 
   //CONTENEDOR PRINCIPAL
   let card = document.createElement('div');
@@ -25,13 +25,13 @@ const createCardPostHome = (isLoggedIn) => {
 
   divC1.classList.add("d-flex", "mb-3", "align-items-center");
   img.classList.add("rounded-circle", "border", "object-fit-cover", "me-3");
-  img.setAttribute("src", "https://xsgames.co/randomusers/avatar.php?g=pixel");
+  img.setAttribute("src", "https://i.pravatar.cc/");
   img.style.width = "40px";
   span.classList.add("d-flex", "flex-column");
   h5.classList.add("fs-6", "fw-bold");
   h5.textContent = userName; //Rgistrar nombre de usuario que inicio sesión
   span2C1.classList.add("fs-6", "fw-light");
-  span2C1.textContent = date;
+  span2C1.textContent = date.slice(0, 10);
 
   span.appendChild(h5);
   span.appendChild(span2C1);
@@ -44,7 +44,7 @@ const createCardPostHome = (isLoggedIn) => {
   h1.classList.add("card-title");
 
   const a = document.createElement("a");
-  a.href = "../views/postView.html";
+  a.href = `../views/postView.html?id=${id}}`;
   a.textContent = postTitle;
 
   h1.appendChild(a);
@@ -52,9 +52,9 @@ const createCardPostHome = (isLoggedIn) => {
   const ul = document.createElement("ul");
   ul.classList.add("list-tag__main");
 
-  hashtags.forEach((hashtag) => {
+  hashtags.split(' ').join('').split(',').forEach((hashtag) => {
     const li = document.createElement("li");
-    li.textContent = hashtag;
+    li.textContent = `#${hashtag}`;
     ul.appendChild(li);
   });
 
@@ -97,7 +97,7 @@ const createCardPostHome = (isLoggedIn) => {
     divC3.appendChild(div3);
 
     //BTN Delete
-    if (isLoggedIn()) {
+    if (isLogged()) {
       let btnDelete = document.createElement('button');
       btnDelete.classList.add('btn', 'btn-danger', 'py-0', 'mx-3');
       btnDelete.setAttribute('id', id);

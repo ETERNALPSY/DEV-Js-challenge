@@ -30,14 +30,15 @@
 
     li{
         margin: 0 0.5em;
+        border: 1px solid transparent;
         color: $syntax-comment-color;
+        padding: 0.2em;
         cursor: pointer;
     }
 
     li:hover{
-        border: 1px solid $syntax-comment-color;
+        border-color: $syntax-comment-color;
         border-radius: 0.5em;
-        padding: 0.2em;
         cursor: pointer;
     }
 }
