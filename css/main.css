@@ -41,11 +41,6 @@
   color: rgb(80, 99, 255) !important;
 }
 
-@media only screen and (min-width: 992px) {
-  .input-group, .btn-outline-primary {
-    display: none;
-  }
-}
 nav {
   background-color: green;
 }
@@ -101,6 +96,8 @@ footer ul li {
   padding: 0.2em;
   transition: all 0.3s linear;
   cursor: pointer;
+  padding: 0.2em;
+  border-radius: 0.5em;
 }
 .list-tag__main li:hover {
   border-color: #808080;

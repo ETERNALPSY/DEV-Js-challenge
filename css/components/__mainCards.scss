@@ -20,7 +20,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-   
 }
 .list-tag__main{
     display: flex;
@@ -36,6 +35,8 @@
         padding: 0.2em;
         transition: all 0.3s linear;
         cursor: pointer;
+        padding: 0.2em;
+        border-radius: 0.5em;
     }
 
     li:hover{

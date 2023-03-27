@@ -10,11 +10,15 @@ const ulDOM = document.querySelector("#tags-list");
 const detailsDOM = document.querySelector("#details-post");
 const addComentSection = document.querySelector('#add-comment');
 const btnDelete = document.querySelector('#btn-delete'); 
+const navLogged = document.querySelector('#nav-logged');
+const navNoLogged = document.querySelector('#nav-no-logged');
 
 if (!isLogged()) {
   addComentSection.classList.add('d-none');
   btnDelete.classList.add('d-none');
 } else {
+  navLogged.classList.remove('d-none');
+  navNoLogged.classList.add('d-none');
   btnDelete.addEventListener('click', async () => {
     await deleteByid(id);
     window.open('../index.html', '_self');

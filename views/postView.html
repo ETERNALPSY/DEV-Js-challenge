@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../css/main.css">
 </head>
 
+
 <body>
   <!-- Navbar - Karen -->
   <header>
@@ -33,8 +34,14 @@
             </div>
           </div>
         </div>
-
-        <div>
+        <!-- Options no token -->
+        <div class="login-card d-inline ms-1" id="nav-no-logged">
+          <a type="button" href="../views/login.html"
+            class="btn btn-outline-secondary border-0 d-none d-lg-inline-block">Log in</a>
+          <a type="button" href="../views/login.html" class="btn btn-outline-primary">Create Account</a>
+        </div>
+        <!-- Options with token -->
+        <div class="d-none" id="nav-logged">
           <button type="button" class="btn btn-outline-primary d-none d-lg-inline">Create Post</button>
           <img src="../assets/search-icon.svg" alt="search" class="iconsearch d-lg-none" width="24" height="24">
           <img src="../assets/notification-icon.svg" alt="bell" class="iconbell mx-md-3" width="24" height="24">
@@ -225,7 +232,7 @@
       <main class=" col-12 col-lg-8 col-md-11">
         <section class="">
           <div class="card ">
-            <img src="" class="card-img-top " id="img-post"> 
+            <img src="" class="card-img-top " id="img-post">
             <div class="card-body py-4 px-5">
               <div class="d-flex mb-3 align-items-center ">
                 <img class="rounded-circle border object-fit-cover me-3" src="https://i.pravatar.cc/"
@@ -394,5 +401,6 @@
   <script src="https://momentjs.com/downloads/moment.min.js"></script>
   <script type="module" src="../src/postView.js"></script>
 </body>
+
 
 </html>
