@@ -84,19 +84,26 @@ footer ul li {
 
 .list-tag__main {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin-bottom: 2em;
 }
 .list-tag__main li {
   margin: 0 0.5em;
+  border: 1px solid transparent;
   color: #808080;
+  padding: 0.2em;
+  transition: all 0.3s linear;
   cursor: pointer;
   padding: 0.2em;
   border-radius: 0.5em;
 }
 .list-tag__main li:hover {
-  border: 1px solid #808080;
+  border-color: #808080;
+  border-radius: 0.5em;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .left-aside {
