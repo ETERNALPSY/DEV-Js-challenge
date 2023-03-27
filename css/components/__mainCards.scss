@@ -20,7 +20,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-   
 }
 .list-tag__main{
     display: flex;
@@ -32,12 +31,11 @@
         margin: 0 0.5em;
         color: $syntax-comment-color;
         cursor: pointer;
+        padding: 0.2em;
+        border-radius: 0.5em;
     }
 
     li:hover{
         border: 1px solid $syntax-comment-color;
-        border-radius: 0.5em;
-        padding: 0.2em;
-        cursor: pointer;
     }
 }

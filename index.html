@@ -15,48 +15,67 @@
 <body>
     <!-- Navbar - Karen -->
     <header>
-        <nav class=" navbar navbar-expand-lg navbar-light border-bottom bg-white ">
+        <nav class=" navbar navbar-expand-lg navbar-light border-bottom bg-white p-1">
             <div class="container d-flex flex-row justify-content-between align-items-center w-100 ">
                 <div class="d-flex align-items-center">
                     <button class="navbar-toggler border border-0" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
-                        <img src="./assets/dev-badge.svg" alt="logo" width="40" height="40"
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../assets/dev-badge.svg" alt="logo" width="40" height="40"
                             class="d-inline-block align-text-top">
                     </a>
                     <div class="input-group  border rounded-2 align-items-center d-none d-lg-flex">
                         <input type="search" class="form-control border border-0" placeholder="Search...">
                         <div class="input-group-append">
-                            <button class="btn" type="button"><img src="./assets/search-icon.svg" alt=""></button>
+                            <button class="btn" type="button"><img src="../assets/search-icon.svg" alt=""></button>
                         </div>
                     </div>
                 </div>
-
                 <div>
-                    <button type="button" class="btn btn-outline-primary d-none d-lg-inline">Create Post</button>
-                    <img src="./assets/search-icon.svg" alt="search" class="iconsearch d-lg-none" width="24"
+                    <img src="../assets/search-icon.svg" alt="search" class="iconsearch d-lg-none d-inline" width="24"
                         height="24">
-                    <img src="./assets/notification-icon.svg" alt="bell" class="iconbell" width="24" height="24">
-                    <img src="./assets/profile-avatar.webp" alt="profile avatar" width="40" height="40"
-                        class="rounded-circle">
+                    <div class="login-card d-inline ms-1">
+                        <a type="button" href="../views/login.html"
+                        class="btn btn-outline-secondary border-0 d-none d-lg-inline-block">Log in</a>
+                        <a type="button" href="../views/login.html" class="btn btn-outline-primary">Create Account</a>
+                    </div>
+                    <div class="logout-card d-inline">
+                        <a href="#" type="button" class="btn btn-outline-primary d-none d-lg-inline">Create Post</a>
+                        <img src="../assets/notification-icon.svg" alt="bell" class="iconbell" width="24" height="24">
+                        <img src="../assets/profile-avatar.webp" alt="profile avatar" width="40" height="40"
+                            class="rounded-circle">
+                    </div>
                 </div>
             </div>
-
         </nav>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+
+        <!-- starts offcanvas -->
+        <div class="offcanvas offcanvas-start p-3" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">DEV Community 👩‍💻👨‍💻</h5>
+                <h4 class="offcanvas-title fw-bolder" id="offcanvasExampleLabel">DEV Community</h4>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
+
+            </div>
+            <div class="login-card card border-light text-bg-light mb-3">
+                <div class="card-body p-3 ">
+                    <h5 class="">DEV Community is a community of 1,033,482 amazing developers</h5>
+                    <p class="card-subtitle my-3 text-body-secondary">We're a place where coders share, stay up-to-date and grow their careers.</p>
+                    <div>
+                        <a type="button" href="../views/login.html" class="btn btn-outline-primary d-block mb-2">Create Account</a>
+                        <a type="button" href="../views/login.html"
+                            class="btn btn-outline-secondary border-0 d-block">Log in</a>
+                    </div>
+                </div>
             </div>
             <ul class="list-options px-2">
                 <li class="">
                     <a class="text-decoration-none" href="">
                         <i>
-                            <img src="./assets/home-icon.svg" alt="">
+                            <img src="../assets/home-icon.svg" alt="">
                         </i>
                         Home
                     </a>
@@ -64,7 +83,7 @@
                 <li class="">
                     <a class="text-decoration-none" href="">
                         <i>
-                            <img src="./assets/listings-icon.svg" alt="">
+                            <img src="../assets/listings-icon.svg" alt="">
                         </i>
                         Listings
                     </a>
@@ -72,7 +91,7 @@
                 <li class="">
                     <a class="text-decoration-none" href="">
                         <i>
-                            <img src="./assets/podcast-icon.svg" alt="">
+                            <img src="../assets/podcast-icon.svg" alt="">
                         </i>
                         Podcasts
                     </a>
@@ -80,7 +99,7 @@
                 <li class="">
                     <a class="text-decoration-none" href="">
                         <i>
-                            <img src="./assets/video-icon.svg" alt="">
+                            <img src="../assets/video-icon.svg" alt="">
                         </i>
                         Videos
                     </a>
@@ -88,7 +107,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/tag-icon.svg" alt="">
+                            <img src="../assets/tag-icon.svg" alt="">
                         </i>
                         Tags
                     </a>
@@ -96,7 +115,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/faq-icon.svg" alt="">
+                            <img src="../assets/faq-icon.svg" alt="">
                         </i>
                         FAQ
                     </a>
@@ -104,7 +123,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/foremShop-icon.svg" alt="">
+                            <img src="../assets/foremShop-icon.svg" alt="">
                         </i>
                         Forem Shop
                     </a>
@@ -112,7 +131,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/sponsors-icon.svg" alt="">
+                            <img src="../assets/sponsors-icon.svg" alt="">
                         </i>
                         Sponsors
                     </a>
@@ -120,7 +139,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/about-icon.svg" width="20" alt="">
+                            <img src="../assets/about-icon.svg" width="20" alt="">
                         </i>
                         About
                     </a>
@@ -128,7 +147,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/contact-icon.svg" width="20" alt="">
+                            <img src="../assets/contact-icon.svg" width="20" alt="">
                         </i>
                         Contact
                     </a>
@@ -136,7 +155,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/guides-icon.svg" width="20" alt="">
+                            <img src="../assets/guides-icon.svg" width="20" alt="">
                         </i>
                         Guides
                     </a>
@@ -144,7 +163,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/softwareComparison-icon.svg" width="20" alt="">
+                            <img src="../assets/softwareComparison-icon.svg" width="20" alt="">
                         </i>
                         Software comparisons
                     </a>
@@ -156,7 +175,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/codeConduct-icon.svg" width="20" alt="">
+                            <img src="../assets/codeConduct-icon.svg" width="20" alt="">
                         </i>
                         Code of Conduct
                     </a>
@@ -164,7 +183,7 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/privacyPolicy-icon.svg" width="20" alt="">
+                            <img src="../assets/privacyPolicy-icon.svg" width="20" alt="">
                         </i>
                         Privacy Policy
                     </a>
@@ -172,22 +191,22 @@
                 <li class="">
                     <a class="" href="">
                         <i>
-                            <img src="./assets/terms-icon.svg" width="20" alt="">
+                            <img src="../assets/terms-icon.svg" width="20" alt="">
                         </i>
                         Terms of Use
                     </a>
                 </li>
             </ul>
             <div class="d-flex justify-content-around px-2 ">
-                <img src="./assets/tw-icon.svg" alt="">
-                <img src="./assets/fb-icon.svg" alt="">
-                <img src="./assets/gh-icon.svg" alt="">
-                <img src="./assets/ig-icon.svg" alt="">
-                <img src="./assets/twt-icon.svg" alt="">
+                <img src="../assets/tw-icon.svg" alt="">
+                <img src="../assets/fb-icon.svg" alt="">
+                <img src="../assets/gh-icon.svg" alt="">
+                <img src="../assets/ig-icon.svg" alt="">
+                <img src="../assets/twt-icon.svg" alt="">
             </div>
         </div>
+        <!-- ends offcanvas -->
 
-        </div>
     </header>
     <!-- End: Navbar - Karen -->
 
@@ -197,6 +216,19 @@
             <!-- Left Aside - Eddie -->
             <aside class=" d-none d-md-block d-lg-block col-md-4 col-lg-2">
                 <div>
+
+                    <div class="login-card card border-light text-bg-light mb-3">
+                        <div class="card-body p-3 ">
+                            <h5 class="">DEV Community is a community of 1,033,482 amazing developers</h5>
+                            <p class="card-subtitle my-3 text-body-secondary">We're a place where coders share, stay up-to-date and grow their careers.</p>
+                            <div>
+                                <a type="button" href="./views/login.html" class="btn btn-outline-primary d-block mb-2">Create Account</a>
+                                <a type="button" href="./views/login.html"
+                                    class="btn btn-outline-secondary border-0 d-block">Log in</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <ul class="list-options">
                         <li class="">
                             <a class="text-decoration-none" href="">
