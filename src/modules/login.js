@@ -1,5 +1,5 @@
 let formButton = document.getElementById('form__button')
-let fields = document.querySelectorAll("#login-form input")
+let fields = document.querySelectorAll("#login-form .form-control")
 let credentials = {}
 
 fields.forEach(field => {
@@ -11,9 +11,15 @@ fields.forEach(field => {
 })
 
 formButton.addEventListener("click", () => {
-    /*credentials.name && credentials.pass 
+    credentials.email && credentials.password 
     ? (localStorage.setItem("token", JSON.stringify(credentials)), window.open('../index.html', '_self'))
-    : alert('Complete Form')*/
-    console.log(credentials)
-    localStorage.setItem("token", JSON.stringify(credentials))
+    :  fields.forEach(field => {
+        field.value ? null : field.classList.add("is-invalid")
+    })
+})
+
+fields.forEach(field => {
+    field.addEventListener("keyup", () =>{
+        field.classList.remove("is-invalid")
+    })
 })
