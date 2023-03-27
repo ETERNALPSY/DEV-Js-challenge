@@ -41,11 +41,6 @@
   color: rgb(80, 99, 255) !important;
 }
 
-@media only screen and (min-width: 992px) {
-  .input-group, .btn-outline-primary {
-    display: none;
-  }
-}
 nav {
   background-color: green;
 }
@@ -122,16 +117,16 @@ footer ul li {
   transition: all 1s;
 }
 .left-aside__div-button:hover .heart {
-  background-color: hsla(0deg, 50%, 69%, 0.452);
+  background-color: hsla(0, 50%, 69%, 0.452);
 }
 .left-aside__div-button:hover .comment {
-  background-color: hsla(36deg, 68%, 77%, 0.452);
+  background-color: hsla(36, 68%, 77%, 0.452);
 }
 .left-aside__div-button:hover .save {
-  background-color: hsla(236deg, 82%, 78%, 0.452);
+  background-color: hsla(236, 82%, 78%, 0.452);
 }
 .left-aside__div-button:hover .dots {
-  background-color: hsla(0deg, 0%, 79%, 0.452);
+  background-color: hsla(0, 0%, 79%, 0.452);
 }
 .left-aside__div-button:hover .msj {
   text-align: center;
@@ -142,7 +137,6 @@ footer ul li {
 
 @media screen and (min-width: 768px) {
   .left-aside {
-    position: -webkit-sticky !important;
     position: sticky !important;
     justify-content: center;
     align-items: center;
