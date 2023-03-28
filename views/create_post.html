@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="row mt-2">
+      <div class="col-8 mt-3 d-flex justify-content-between">
+        <span class="d-flex">
+          <a href="../index.html" id="a-logo">
+            <img class="site-logo__img"
+              src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+              alt="DEV Community">
+          </a>
+          <p class="ms-3 mt-1">Create Post</p>
+        </span>
+        <div>
+          <ul class="d-flex mt-1" style="list-style: none;">
+            <a href="" style="text-decoration:none;">
+              <li>Edit</li>
+            </a>
+            <a href="" style="text-decoration:none;" class="ms-3">
+              <li>Preview</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-4 mt-3 d-flex justify-content-end">
+        <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button" id="btn-close" class="c-btn c-btn--icon-alone border-0" title="Close the editor"
+          aria-label="Close the editor"><svg class="crayons-icon c-btn__icon" aria-hidden="true" focusable="false"
+            width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m12 10.586 4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z">
+            </path>
+          </svg></button>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">You have unsaved changes</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                You've made changes to your post. Do you want to navigate to leave this page?
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="modal-leave" class="btn btn-danger">Yes, leave the page</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No, keep editing</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="row vh-75 d-flex align-items-center">
+      <div class="col-7 offset-md-1">
+        <form class="border p-3" id="post-form">
+          <div class="mb-3">
+            <label>
+              <input type='file' accept="image/*" name="image" id="getFile" hidden>
+              <button id="button-image" type="button">Add a cover image</button>
+            </label>
+            <div id="subir-imagen" class="progress w-25 mt-1">
+
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control-lg border-0" name="title" id="post-title"
+              placeholder="New post title here">
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control border-0" name="tags" id="post-tags"
+              placeholder="Add up to 4 tags...">
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control border-0" id="post-coments" name="comments"
+              placeholder="Write your post content here..." rows="20"></textarea>
+          </div>
+
+        </form>
+        <button type="button" id="btn-send" class="btn btn-primary mt-3">Publish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script type="module" src="../src/createPost.js"></script>
+</body>
+
+</html>
