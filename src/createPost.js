@@ -1,6 +1,7 @@
 import { progressBar } from "./modules/progressBarModule.js"
 import { createPost } from "./modules/createPostModule.js";
 import {storage, ref, uploadBytesResumable, getDownloadURL} from "./modules/firebase.js"
+import { previewDOM } from "./modules/previewDOMModule.js";
 
 let fields = document.querySelectorAll("#post-form input")
 
@@ -61,14 +62,10 @@ btnImage.addEventListener("click", () => {
             },
             () => {
                 // Handle successful uploads on complete
-                //divImage.removeChild()
                 // For instance, get the download URL: https://firebasestorage.googleapis.com/...
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                     console.log('File available at', downloadURL);
-                    //alert("Se subió la imágen en: "+downloadURL)
                     data["image"] = downloadURL
-                    //Aquí
-                    //showImage()
                 });
             }
         );
@@ -93,4 +90,28 @@ let btnModal = document.querySelector("#modal-leave")
 
 btnModal.addEventListener('click',()=>{
     window.open("../index.html","_self")
+})
+
+//Opciones de editar y preview
+
+let anchorEdit = document.querySelector("#a-edit")
+let anchorPreview = document.querySelector("#a-preview")
+let divPreviewContent = document.querySelector("#preview-content")
+
+document.getElementById("preview").style.display = "none"
+
+anchorEdit.addEventListener("click",()=>{
+    document.getElementById("edit").style.display = "block"
+    document.getElementById("preview").style.display = "none"
+})
+
+anchorPreview.addEventListener("click",()=>{
+    document.getElementById("preview").style.display = "block"
+    document.getElementById("edit").style.display = "none"
+
+    let previewContent = document.querySelector("#preview-content")
+    previewContent.innerHTML = ""
+
+    let {image, title, tags, content} = data
+    previewContent.appendChild(previewDOM(image,title,tags,content))
 })
