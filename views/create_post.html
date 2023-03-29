@@ -12,25 +12,25 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container ">
 
-    <div class="row mt-2">
-      <div class="col-8 mt-3 d-flex justify-content-between">
+    <div class="row mt-1 mb-1">
+      <div class="col-8 mt- d-flex justify-content-between">
         <span class="d-flex">
           <a href="../index.html" id="a-logo">
             <img class="site-logo__img"
-              src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+              src="../assets/dev-badge.svg"
               alt="DEV Community">
           </a>
-          <p class="ms-3 mt-1">Create Post</p>
+          <p class="ms-3 mt-3 fw-semibold">Create Post</p>
         </span>
         <div>
-          <ul class="d-flex mt-1" style="list-style: none;">
+          <ul class="d-flex mt-3 mb-0" style="list-style: none;">
             <a href="#edit" id="a-edit" style="text-decoration:none;">
-              <li>Edit</li>
+              <li class="text-black fw-semibold p-2 rounded">Edit</li>
             </a>
             <a href="#preview" id="a-preview" style="text-decoration:none;" class="ms-3">
-              <li>Preview</li>
+              <li class="text-black p-2 rounded">Preview</li>
             </a>
           </ul>
         </div>
@@ -38,7 +38,7 @@
 
       <div class="col-4 mt-3 d-flex justify-content-end">
         <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button" id="btn-close"
-          class="c-btn c-btn--icon-alone border-0" title="Close the editor" aria-label="Close the editor"><svg
+          class="c-btn c-btn--icon-alone border-0 rounded" title="Close the editor" aria-label="Close the editor"><svg
             class="crayons-icon c-btn__icon" aria-hidden="true" focusable="false" width="24" height="24"
             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -74,11 +74,11 @@
 
     <div class="row vh-75 d-flex align-items-center">
       <div id="edit" class="col-7 offset-md-1">
-        <form class="border p-3 rounded" id="post-form">
+        <form class="border px-5 py-4 rounded" id="post-form">
           <div class="mb-3">
             <label>
               <input type='file' accept="image/*" name="image" id="getFile" hidden>
-              <button id="button-image" type="button">Add a cover image</button>
+              <button id="button-image" class="py-2 px-3 fw-semibold bg-white rounded" type="button">Add a cover image</button>
             </label>
             <div id="subir-imagen" class="progress w-25 mt-1">
 
@@ -86,18 +86,18 @@
           </div>
 
           <div class="mb-3">
-            <input type="text" class="form-control-lg border-0" name="title" id="post-title"
+            <input type="text" class="form-control-lg border-0 p-0" name="title" id="post-title"
               placeholder="New post title here">
           </div>
 
           <div class="mb-3">
-            <input type="text" class="form-control border-0" name="tags" id="post-tags"
+            <input type="text" class="form-control border-0 p-0 mb-4" name="tags" id="post-tags"
               placeholder="Add up to 4 tags...">
           </div>
 
           <div class="mb-3">
-            <textarea class="form-control border-0" id="post-coments" name="comments"
-              placeholder="Write your post content here..." rows="15"></textarea>
+            <textarea class="form-control border-0 p-0" id="post-coments" name="comments"
+              placeholder="Write your post content here..." rows="20"></textarea>
           </div>
 
         </form>

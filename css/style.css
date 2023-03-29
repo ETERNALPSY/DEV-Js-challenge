@@ -7,10 +7,7 @@ body {
 }
 
 #button-image{
-    margin-left: 1rem;
-    background-color: white;
-    border-radius: 0.3rem;
-    border: 1px solid gray
+    border: 2px solid #c7c7c7de;
 }
 
 #post-title{
@@ -21,20 +18,32 @@ body {
 }
 
 #post-title::placeholder {
-    font-size: 2.5rem;
-    color: black;
+    font-size: 3rem;
+    color: #000000a2;
+    font-weight: bolder;
 }
 
 #post-coments::placeholder{
     font-size: 1.2rem;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    
 }
 
 #a-logo img{
     width: 2.5rem;
-    height: 2rem;
 }
 
+textarea{
+    resize: none;
+}
 
+.c-btn {
+    background-color: transparent;
+    
+}
 
+li:hover, .c-btn:hover {
+    color: #3B49DF !important;
+    background-color: #3b49df13;
+    fill: #3B49DF;
+}
