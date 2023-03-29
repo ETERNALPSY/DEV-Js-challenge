@@ -26,8 +26,8 @@ const createCardPostHome = (imgUrl, postTitle, userName = 'Anónimo', hashtags, 
   span.classList.add("d-flex", "flex-column", "justify-content-center");
   h5.classList.add("fs-6", "fw-bold", "m-0");
   h5.textContent = userName; //Rgistrar nombre de usuario que inicio sesión
-  span2C1.classList.add("fs-6", "fw-light");
-  span2C1.textContent = `${moment(date).format('MMM D')}`
+  span2C1.classList.add("fw-light", "date");
+  span2C1.textContent = `${moment(date).format('MMM D')} (${moment(date).fromNow()})`
 
   span.appendChild(h5);
   span.appendChild(span2C1);
@@ -88,35 +88,10 @@ const createCardPostHome = (imgUrl, postTitle, userName = 'Anónimo', hashtags, 
   img3.setAttribute("src", "../assets/save-icon.svg");
   img3.setAttribute("alt", "");
   span3.classList.add("d-flex", "align-items-center");
-  span3.appendChild(document.createTextNode("1 min"));
+  span3.appendChild(document.createTextNode(moment(date).startOf().fromNow()));
   span3.appendChild(img3);
   div3.appendChild(span3);
   divC3.appendChild(div3);
-    divC3.classList.add("d-flex", "justify-content-between", "w-100");
-    div2.classList.add("d-flex", "align-items-center");
-    img1.setAttribute("src", "../assets/heart-icon.svg");
-    img1.setAttribute("alt", "");
-    img2.setAttribute("src", "../assets/comment-icon.svg");
-    img2.setAttribute("alt", "");
-    span1.classList.add("d-flex", "align-items-center", "me-3");
-    span1.appendChild(img1);
-    span1.appendChild(document.createTextNode("8 Reactions"));
-    span2.classList.add("d-flex", "align-items-center");
-    span2.appendChild(img2);
-    span2.appendChild(document.createTextNode("2 Comments"));
-    div2.appendChild(span1);
-    div2.appendChild(span2);
-    divC3.appendChild(div2);
-    /*const div3 = document.createElement("div");
-    const span3 = document.createElement("span");
-    const img3 = document.createElement("img");*/
-    img3.setAttribute("src", "../assets/save-icon.svg");
-    img3.setAttribute("alt", "");
-    span3.classList.add("d-flex", "align-items-center");
-    span3.appendChild(document.createTextNode("1 min")); ///modificar en tiempo real
-    span3.appendChild(img3);
-    div3.appendChild(span3);
-    divC3.appendChild(div3);
 
   //BTN Delete
   if (isLogged()) {
@@ -137,6 +112,4 @@ const createCardPostHome = (imgUrl, postTitle, userName = 'Anónimo', hashtags, 
   return card;
 }
 
-
-
-export { createCardPostHome }; 
+export { createCardPostHome };
