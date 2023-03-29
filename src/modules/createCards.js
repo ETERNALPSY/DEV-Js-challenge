@@ -1,8 +1,7 @@
 import { values } from "./filter.js";
 import { deleteByid } from "./requestPostsView.js";
 
-const createCardPostHome = (imgUrl, postTitle, hashtags, date, id, isLogged) => {
-  let userName = 'Johana Smith';
+const createCardPostHome = (imgUrl, postTitle, userName, hashtags, date, id, isLogged) => {
 
   //CONTENEDOR PRINCIPAL
   let card = document.createElement('div');

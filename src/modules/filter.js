@@ -12,8 +12,8 @@ const values = async ()=>{
     let get = await getElement()
     document.querySelectorAll('#posts-home .card').forEach(card => card.remove())
     for( let key in get){
-        let {content,creationDate,image,tags,title} = get[key]
-        btn.appendChild(createCardPostHome(image,title,tags,creationDate,key,isLogged))
+        let {creationDate,image,tags,title, userName} = get[key]
+        btn.appendChild(createCardPostHome(image,title, userName,tags,creationDate,key,isLogged))
         
         wordslower.push(title.toLowerCase())//almace
     }
@@ -28,8 +28,8 @@ const filterforLupita = async ()=>{
         for(let key in get){
             let lowerTitle =get[key].title.toLowerCase()
             if(lowerTitle.includes(string.toLowerCase()) != false){
-                let{image,title,tags,content,creationDate} =get[key]
-                btn.appendChild(createCardPostHome(image,title,tags,creationDate,key,isLogged))
+                let {creationDate,image,tags,title, userName} = get[key]
+                btn.appendChild(createCardPostHome(image,title, userName,tags,creationDate,key,isLogged))
             }
         }
     })
@@ -47,8 +47,8 @@ const sortByDate = async ()=>{
     document.getElementById("order-Post").addEventListener("click",()=>{
         document.querySelectorAll('#posts-home .card').forEach(card => card.remove())
         for (let key in completeResult ){
-            let{image,title,tags,content,creationDate} =completeResult[key]
-            btn.appendChild(createCardPostHome(image,title,tags,creationDate,key,isLogged))
+            let {creationDate,image,tags,title, userName} = completeResult[key]
+            btn.appendChild(createCardPostHome(image,title, userName,tags,creationDate,key,isLogged))
         }
     }) 
 }

@@ -5,6 +5,7 @@ const id = urlParams.get('id');
 
 const imgDOM = document.querySelector("#img-post"); 
 const titleDOM = document.querySelector("#title-post"); 
+const nameDOM = document.querySelector("#user-name"); 
 const dateDOM = document.querySelector("#date-post"); 
 const ulDOM = document.querySelector("#tags-list"); 
 const detailsDOM = document.querySelector("#details-post");
@@ -27,16 +28,17 @@ if (!isLogged()) {
 
 const renderPost = async () => {
   let postObject = await getPostById(id);
-  let { image, title, creationDate, tags, content } = postObject;
+  let { image, title, userName, creationDate, tags, content } = postObject;
   let formatDate = moment(creationDate).format('DD/MM/YYYY');
   let timeAgo = moment(creationDate).fromNow();
 
   imgDOM.src = image;
   titleDOM.textContent = title;
+  nameDOM.textContent = userName;
   dateDOM.textContent = `${formatDate} (${timeAgo})`;
   detailsDOM.textContent = content
   //Hashtags DOM
-  tags.split(' ').join('').split(',').forEach(tag => {
+  tags.split('/[,\s]+/').forEach(tag => {
     let li = document.createElement('li');
     li.textContent = `#${tag}`;
     ulDOM.appendChild(li);

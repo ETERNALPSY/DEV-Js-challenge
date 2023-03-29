@@ -74,6 +74,7 @@ let btnSendForm = document.querySelector("#btn-send")
 btnSendForm.addEventListener("click",async()=>{
     let { title } = data
     data["creationDate"] = new Date()
+    data["userName"] = JSON.parse(localStorage.getItem("token")).name;
 
     if(title) {
         await createPost(data)
