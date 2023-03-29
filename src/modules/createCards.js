@@ -1,3 +1,6 @@
+import { deleteByid } from "./requestPostsView.js";
+
+
 const createCardPostHome = (imgUrl, postTitle, hashtags, date, id, isLogged) => {
   //Provicional, serán pasados como paramentros
   // let imgUrl = 'https://picsum.photos/200/100';
@@ -103,7 +106,8 @@ const createCardPostHome = (imgUrl, postTitle, hashtags, date, id, isLogged) => 
       btnDelete.setAttribute('id', id);
       btnDelete.textContent = 'Delete';
       btnDelete.addEventListener('click', (e) => {
-        console.log(e.target);
+        deleteByid(e.currentTarget.id);
+        window.location.reload();
       });
       span3.insertBefore(btnDelete, img3);
     }
