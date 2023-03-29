@@ -107,9 +107,9 @@ const createCardPostHome = (imgUrl, postTitle, userName = 'Anónimo', hashtags, 
     div2.appendChild(span1);
     div2.appendChild(span2);
     divC3.appendChild(div2);
-    const div3 = document.createElement("div");
+    /*const div3 = document.createElement("div");
     const span3 = document.createElement("span");
-    const img3 = document.createElement("img");
+    const img3 = document.createElement("img");*/
     img3.setAttribute("src", "../assets/save-icon.svg");
     img3.setAttribute("alt", "");
     span3.classList.add("d-flex", "align-items-center");
