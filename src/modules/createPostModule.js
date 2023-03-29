@@ -8,4 +8,10 @@ const createPost = async (koderObject) => {
     return data
 }
 
-export{ createPost }
+const getElement = async () => {
+    let response = await fetch("https://devto-challange-default-rtdb.firebaseio.com/.json" );
+    let data = await response.json();
+    return data;
+}
+
+export{ createPost, getElement}
