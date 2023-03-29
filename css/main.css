@@ -124,6 +124,14 @@ footer ul li {
   display: none;
 }
 
+ul li button {
+  background-color: transparent !important;
+}
+ul li button:hover {
+  background-color: white !important;
+  color: #3B49DF !important;
+}
+
 #card-view-post .card img.card-img-top {
   height: 19rem;
   -o-object-fit: cover;
