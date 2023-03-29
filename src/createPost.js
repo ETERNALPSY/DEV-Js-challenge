@@ -12,7 +12,6 @@ fields.forEach((field) => {
         let property = event.target.name
         let value = event.target.value
         data = { ...data, [property]: value }
-        console.log(data)
     })
 })
 
@@ -21,7 +20,6 @@ let textarea = document.querySelector("#post-form textarea")
 textarea.addEventListener("keyup", (event) => {
     let value = event.target.value
     data = { ...data, ["content"]: value }
-    console.log(data)
 })
 
 
@@ -45,7 +43,6 @@ btnImage.addEventListener("click", () => {
                 // Observe state change events such as progress, pause, and resume
                 // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
                 const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                console.log('Upload is ' + progress + '% done');
                 divImage.appendChild(progressBar(Math.round(progress)))
                 switch (snapshot.state) {
                     case 'paused':

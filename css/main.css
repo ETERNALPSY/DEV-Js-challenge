@@ -84,17 +84,18 @@ footer ul li {
 
 .list-tag__main {
   display: flex;
+  justify-content: start;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .list-tag__main li {
-  margin: 0 0.5em;
+  font-size: 0.8rem;
+  margin: 0 0.2em 0 0;
   border: 1px solid transparent;
   color: #808080;
-  padding: 0.2em;
-  transition: all 0.3s linear;
+  padding: 0.3em;
   cursor: pointer;
   padding: 0.2em;
   border-radius: 0.5em;
@@ -102,8 +103,31 @@ footer ul li {
 .list-tag__main li:hover {
   border-color: #808080;
   border-radius: 0.5em;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(141, 140, 140, 0.1);
   cursor: pointer;
+}
+
+#posts-home .card img.card-img-top {
+  height: 16.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#posts-home .card h4 {
+  font-size: 1.85rem;
+}
+#posts-home .card .date {
+  font-size: 0.8rem;
+}
+#posts-home :not(:first-child) img.card-img-top {
+  display: none;
+}
+
+#card-view-post .card img.card-img-top {
+  height: 19rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .left-aside {
@@ -118,6 +142,7 @@ footer ul li {
 }
 .left-aside__div-button img {
   width: 3rem;
+  margin: 0;
 }
 .left-aside__div-button .msj {
   transition: all 1s;
