@@ -7,7 +7,6 @@ import {isLogged} from "./isLogged.js"
 //Filtar por barra de navegación 
 
 let wordslower = []
-let value
 let btn = document.getElementById("posts-home")
 
 const values = async ()=>{
@@ -34,9 +33,6 @@ const filterforLupita = async ()=>{
         }
     })
 }
-export{filterforLupita, values}
-
-
 //Filtrado por Post mas reciente 
 
 const sortByDate = async ()=>{
@@ -53,6 +49,8 @@ const sortByDate = async ()=>{
         }
     }) 
 }
-export {sortByDate}
+
+export{filterforLupita, values,sortByDate}
+
 
 

@@ -34,7 +34,7 @@ const createCardPostHome = (imgUrl, postTitle, hashtags, date, id, isLogged) => 
   h5.classList.add("fs-6", "fw-bold");
   h5.textContent = userName; //Rgistrar nombre de usuario que inicio sesión
   span2C1.classList.add("fs-6", "fw-light");
-  span2C1.textContent = date.slice(0, 10);
+  span2C1.textContent = `${moment(date).format('MMM D')}`
 
   span.appendChild(h5);
   span.appendChild(span2C1);
@@ -94,7 +94,7 @@ const createCardPostHome = (imgUrl, postTitle, hashtags, date, id, isLogged) => 
     img3.setAttribute("src", "../assets/save-icon.svg");
     img3.setAttribute("alt", "");
     span3.classList.add("d-flex", "align-items-center");
-    span3.appendChild(document.createTextNode("1 min"));
+    span3.appendChild(document.createTextNode("1 min")); ///modificar en tiempo real
     span3.appendChild(img3);
     div3.appendChild(span3);
     divC3.appendChild(div3);
@@ -117,5 +117,7 @@ const createCardPostHome = (imgUrl, postTitle, hashtags, date, id, isLogged) => 
     card.append(imgCard, cardBody);
     return card;
 }
+
+
 
 export { createCardPostHome }; 
