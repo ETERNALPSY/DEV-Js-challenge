@@ -38,7 +38,7 @@ const renderPost = async () => {
   dateDOM.textContent = `${formatDate} (${timeAgo})`;
   detailsDOM.textContent = content
   //Hashtags DOM
-  tags.split('/[,\s]+/').forEach(tag => {
+  tags.split(/[,\s]+/).forEach(tag => {
     let li = document.createElement('li');
     li.textContent = `#${tag}`;
     ulDOM.appendChild(li);
