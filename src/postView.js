@@ -27,7 +27,6 @@ if (!isLogged()) {
 
 const renderPost = async () => {
   let postObject = await getPostById(id);
-  console.log(postObject);
   let { image, title, creationDate, tags, content } = postObject;
   console.log(postObject)
   let formatDate = moment(creationDate).format('DD/MM/YYYY');

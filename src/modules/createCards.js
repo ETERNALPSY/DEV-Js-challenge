@@ -44,7 +44,7 @@ const createCardPostHome = (imgUrl, postTitle, hashtags, date, id, isLogged) => 
   h1.classList.add("card-title");
 
   const a = document.createElement("a");
-  a.href = `../views/postView.html?id=${id}}`;
+  a.href = `../views/postView.html?id=${id}`;
   a.textContent = postTitle;
 
   h1.appendChild(a);
