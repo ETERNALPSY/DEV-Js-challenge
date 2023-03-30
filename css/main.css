@@ -41,11 +41,6 @@
   color: rgb(80, 99, 255) !important;
 }
 
-@media only screen and (min-width: 992px) {
-  .input-group, .btn-outline-primary {
-    display: none;
-  }
-}
 nav {
   background-color: green;
 }
@@ -89,20 +84,58 @@ footer ul li {
 
 .list-tag__main {
   display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .list-tag__main li {
-  margin: 0 0.5em;
+  font-size: 0.8rem;
+  margin: 0 0.2em 0 0;
+  border: 1px solid transparent;
   color: #808080;
+  padding: 0.3em;
   cursor: pointer;
+  padding: 0.2em;
+  border-radius: 0.5em;
 }
 .list-tag__main li:hover {
-  border: 1px solid #808080;
+  border-color: #808080;
   border-radius: 0.5em;
-  padding: 0.2em;
+  background-color: rgba(141, 140, 140, 0.1);
   cursor: pointer;
+}
+
+#posts-home .card img.card-img-top {
+  height: 16.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#posts-home .card h4 {
+  font-size: 1.85rem;
+}
+#posts-home .card .date {
+  font-size: 0.8rem;
+}
+#posts-home :not(:first-child) img.card-img-top {
+  display: none;
+}
+
+ul li button {
+  background-color: transparent !important;
+}
+ul li button:hover {
+  background-color: white !important;
+  color: #3B49DF !important;
+}
+
+#card-view-post .card img.card-img-top {
+  height: 19rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .left-aside {
@@ -117,21 +150,22 @@ footer ul li {
 }
 .left-aside__div-button img {
   width: 3rem;
+  margin: 0;
 }
 .left-aside__div-button .msj {
   transition: all 1s;
 }
 .left-aside__div-button:hover .heart {
-  background-color: hsla(0deg, 50%, 69%, 0.452);
+  background-color: hsla(0, 50%, 69%, 0.452);
 }
 .left-aside__div-button:hover .comment {
-  background-color: hsla(36deg, 68%, 77%, 0.452);
+  background-color: hsla(36, 68%, 77%, 0.452);
 }
 .left-aside__div-button:hover .save {
-  background-color: hsla(236deg, 82%, 78%, 0.452);
+  background-color: hsla(236, 82%, 78%, 0.452);
 }
 .left-aside__div-button:hover .dots {
-  background-color: hsla(0deg, 0%, 79%, 0.452);
+  background-color: hsla(0, 0%, 79%, 0.452);
 }
 .left-aside__div-button:hover .msj {
   text-align: center;
@@ -142,7 +176,6 @@ footer ul li {
 
 @media screen and (min-width: 768px) {
   .left-aside {
-    position: -webkit-sticky !important;
     position: sticky !important;
     justify-content: center;
     align-items: center;

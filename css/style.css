@@ -1,0 +1,49 @@
+body {
+    background-color: #f5f5f5;
+}
+
+#post-form{
+    background-color: white;
+}
+
+#button-image{
+    border: 2px solid #c7c7c7de;
+}
+
+#post-title{
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black
+}
+
+#post-title::placeholder {
+    font-size: 3rem;
+    color: #000000a2;
+    font-weight: bolder;
+}
+
+#post-coments::placeholder{
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+#a-logo img{
+    width: 2.5rem;
+}
+
+textarea{
+    resize: none;
+}
+
+.c-btn {
+    background-color: transparent;
+    
+}
+
+li:hover, .c-btn:hover {
+    color: #3B49DF !important;
+    background-color: #3b49df13;
+    fill: #3B49DF;
+}
