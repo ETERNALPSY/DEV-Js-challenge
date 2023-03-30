@@ -124,10 +124,10 @@ footer ul li {
   display: none;
 }
 
-ul li button {
+.nav li button {
   background-color: transparent !important;
 }
-ul li button:hover {
+.nav li button:hover {
   background-color: white !important;
   color: #3B49DF !important;
 }
